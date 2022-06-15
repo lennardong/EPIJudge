@@ -16,3 +16,18 @@ class BinaryTreeNode:
 
     def __str__(self):
         return self.__repr__()
+
+
+## TESTING 
+a = BinaryTreeNode(1,None,None)
+b = BinaryTreeNode(2,a,list('goodbye'))
+print (f'a str:             {a}')
+print (f'a type:            {type(a)}')
+print (f'a str.left:        {a.left}')
+print (f'a type.left:       {type(a.left)}')
+# print (f'b str: {b}')
+print (f'b type:            {type(b)}')
+print (f'b str.left:        {b.left}')
+print (f'b type.left:       {type(b.left)}')
+print (f'b type.left.left:  {type(b.left.left)}')
+print (f'b type.right:      {type(b.right)}')
