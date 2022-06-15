@@ -1,0 +1,31 @@
+'''
+Write a program that takes an array denoting the dailt stock price and returns the max profit 
+that could be made by buying and selling. there is no need to buy if a no profit is possible
+'''
+import typing
+
+def buy_and_sell_stock(prices: typing.List[int]) -> int: 
+    '''
+    returns max profit for a run of stocks
+
+    concept: use adjacent values for max profit
+    
+    '''
+    max_profit = 0 
+    profit_if_sold_today = 0 
+    min_buy_price = prices[0] 
+
+    for price_today in prices:
+        
+        profit_if_sold_today = price_today - min_buy_price
+        max_profit = max_profit if max_profit > profit_if_sold_today else profit_if_sold_today
+        min_buy_price = min(price_today, min_buy_price)
+        print (f'price: {price_today} | profit if sold today: {profit_if_sold_today} | max profit: {max_profit} | min buy price: {min_buy_price}')
+    
+    return max_profit 
+
+### TEST CASES 
+
+stock1 = [310, 310, 275, 275, 260, 260, 260, 230, 230, 230, 290] 
+stock1_ans = 30 
+print (buy_and_sell_stock(stock1), stock1_ans)
