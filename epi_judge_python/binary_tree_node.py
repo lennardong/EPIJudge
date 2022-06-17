@@ -19,6 +19,7 @@ class BinaryTreeNode:
 
 
 ## TESTING 
+'''
 a = BinaryTreeNode(1,None,None)
 b = BinaryTreeNode(2,a,list('goodbye'))
 print (f'a str:             {a}')
@@ -31,3 +32,4 @@ print (f'b str.left:        {b.left}')
 print (f'b type.left:       {type(b.left)}')
 print (f'b type.left.left:  {type(b.left.left)}')
 print (f'b type.right:      {type(b.right)}')
+'''
