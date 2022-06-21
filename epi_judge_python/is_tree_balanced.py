@@ -2,6 +2,7 @@ from binary_tree_node import BinaryTreeNode
 from test_framework import generic_test
 import collections
 
+
 def is_balanced_binary_tree(tree: BinaryTreeNode) -> bool:
     
     balanced_status_w_height = collections.namedtuple(
